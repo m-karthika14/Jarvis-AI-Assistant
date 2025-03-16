@@ -1,0 +1,59 @@
+.tlt{
+    text-align: center;
+color: aliceblue;
+margin-top: 250px;
+margin-left: -200px; /* Moves the text just below the ball */
+font-size: 20px;
+font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+
+    
+}
+
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: black;
+        margin: 0;
+    }
+
+    .glass-ball {
+        width: 230px;
+        height: 230px;
+        background: radial-gradient(circle, rgba(0, 140, 255, 0.6), rgba(0, 0, 0, 0.8));
+        border-radius: 50%;
+        position: relative;
+        top: -50px; /* Moves the ball upwards */
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 
+                    0 0 30px rgba(0, 140, 255, 0.8);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .eyes {
+        position: absolute;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .eye {
+        width: 15px;
+        height: 40px;
+        background: white;
+        border-radius: 10px;
+        position: relative;
+        transition: transform 0.1s ease-out;
+        animation: blink 4s infinite;
+    }
+
+    @keyframes blink {
+        0%, 90% { height: 40px; }
+        95% { height: 5px; }
+        100% { height: 40px; }
+    }
+
